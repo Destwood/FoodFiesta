@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+.wrapper {
+  background-color: #fff;
+  width: 25%;
+  padding: 1.5rem;
+}
+
+.imgContainer {
+  position: relative;
+  &:hover {
+    cursor: pointer;
+    .img {
+      filter: blur(
+        5px
+      ); /* Застосовуємо блюр до класу .img при наведенні на .imgContainer */
+    }
+    &::after {
+      font-family: "Varela Round", sans-serif;
+      content: "+";
+      color: #fff;
+      font-size: 8rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.355);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.img {
+  width: 100%;
+  display: block;
+  height: 100%; /* Додали висоту для контейнера .img */
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.desc {
+  font-style: italic;
+  text-align: center;
+}
+
+.price {
+  color: #e73d0c;
+  font-weight: 700;
+}
