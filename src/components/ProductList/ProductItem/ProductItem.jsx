@@ -6,7 +6,7 @@ function ProductItem({ selectedType, name, desc, price, img }) {
   const dispatch = useDispatch();
   const clickHandle = () => {
     console.log("click here");
-    dispatch(addToCart({ name, desc, price, img }));
+    dispatch(addToCart(selectedType, { name, desc, price, img }));
   };
   return (
     <div className={style.wrapper}>

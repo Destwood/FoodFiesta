@@ -29,10 +29,22 @@ function Header() {
           Drinks
         </div>
       </div>
-      <div className="" onClick={() => console.log(cartState)}>
+      <div
+        className=""
+        onClick={() => {
+          console.log(cartState);
+        }}
+      >
         {" "}
         {/* Выводим состояние cart при нажатии на кнопку */}
         <img className={style.cart} src={cart} alt="" />
+        {cartState.drinks.length + cartState.pizza.length ? (
+          <p className={style.counter}>
+            {cartState.drinks.length + cartState.pizza.length}
+          </p>
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );

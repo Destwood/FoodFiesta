@@ -14,7 +14,7 @@ function ProductList() {
         {data.map((item) => (
           <ProductItem
             key={item.name}
-            type={selectedType}
+            selectedType={selectedType}
             name={item.name}
             desc={item.desc}
             price={item.price}

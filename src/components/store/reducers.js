@@ -100,7 +100,7 @@ const defaultState = {
   },
   cart: {
     pizza: [],
-    drink: [],
+    drinks: [],
   },
   selectedType: "pizza",
 };
@@ -114,15 +114,16 @@ const reducer = (state = defaultState, action) => {
       console.log(action.payload);
       return { ...state, selectedType: action.payload };
     case ADD_TO_CART:
-      const { type, product } = action.payload;
+      const { selectedType, product } = action.payload;
+      console.log(state.cart[selectedType]);
       return {
         ...state,
         cart: {
           ...state.cart,
-          [type]: { ...state.cart[type] },
-          product,
+          [selectedType]: [...state.cart[selectedType], product],
         },
       };
+
     case REMOVE_FROM_CART:
       console.log("removing something...");
       // Логика удаления товара из корзины
