@@ -1,0 +1,40 @@
+$back: #181818;
+
+.wrapper {
+  position: fixed;
+  width: 100%;
+  height: 4rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.goodsContainer {
+  color: #fff;
+  width: 95%;
+  display: flex;
+  background-color: $back;
+}
+
+.goodsOption {
+  width: 50%;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.cart {
+  height: 4rem;
+  &:hover {
+    cursor: pointer;
+    color: $back;
+  }
+}
+
+.btn {
+  &:hover {
+    cursor: pointer;
+    background-color: #fff;
+    color: $back;
+  }
+}

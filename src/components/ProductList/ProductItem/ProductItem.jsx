@@ -1,10 +1,12 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import style from "./ProductItem.module.scss";
-import img from "./pizza.jpg";
-
-function ProductItem({ img2, title, desc, price }) {
+import { addToCart } from "../../store/actions";
+function ProductItem({ selectedType, name, desc, price, img }) {
+  const dispatch = useDispatch();
   const clickHandle = () => {
     console.log("click here");
+    dispatch(addToCart({ name, desc, price, img }));
   };
   return (
     <div className={style.wrapper}>
@@ -13,11 +15,9 @@ function ProductItem({ img2, title, desc, price }) {
       </div>
 
       <div className={style.content}>
-        <h4 className={style.title}>Cheese Pizza</h4>
-        <p className={style.desc}>
-          Get our classic Pepperoni pizza with your choice of sauce and crust.
-        </p>
-        <p className={style.price}>$16.35</p>
+        <h4 className={style.title}>{name}</h4>
+        <p className={style.desc}>{desc}</p>
+        <p className={style.price}>${price}</p>
       </div>
     </div>
   );
