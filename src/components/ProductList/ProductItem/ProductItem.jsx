@@ -5,7 +5,6 @@ import { addToCart } from "../../store/actions";
 function ProductItem({ selectedType, name, desc, price, img }) {
   const dispatch = useDispatch();
   const clickHandle = () => {
-    console.log("click here");
     dispatch(addToCart(selectedType, { name, desc, price, img }));
   };
   return (

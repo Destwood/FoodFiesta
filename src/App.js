@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 
 import Hero from "./components/Hero/Hero";
+import Cart from "./components/Cart/Cart";
 import ProductList from "./components/ProductList/ProductList";
 import Header from "./components/Header/Header";
 
@@ -36,6 +37,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <Cart />
       <Hero />
       <ProductList />
     </div>

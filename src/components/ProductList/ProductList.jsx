@@ -5,9 +5,7 @@ import { useSelector } from "react-redux";
 
 function ProductList() {
   const selectedType = useSelector((state) => state.selectedType);
-  console.log(selectedType);
   const data = useSelector((state) => state.data[selectedType]);
-  console.log(data);
   return (
     <div className={style.wrapper}>
       <div className={style.content}>

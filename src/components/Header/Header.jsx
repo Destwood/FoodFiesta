@@ -1,13 +1,13 @@
 import React from "react";
 import style from "./Header.module.scss";
-import { useDispatch, useSelector } from "react-redux"; // Импортируем useSelector
+import { useDispatch, useSelector } from "react-redux";
 
 import cart from "./cart.svg";
-import { setSelectedType } from "../store/actions";
+import { modalState, setSelectedType } from "../store/actions";
 
 function Header() {
   const dispatch = useDispatch();
-  const cartState = useSelector((state) => state.cart); // Получаем состояние cart
+  const cartState = useSelector((state) => state.cart);
 
   return (
     <div className={style.wrapper}>
@@ -30,14 +30,14 @@ function Header() {
         </div>
       </div>
       <div
-        className=""
+        className={style.cart}
         onClick={() => {
-          console.log(cartState);
+          // dispatch(addToCart(selectedType, { name, desc, price, img }));
+          dispatch(modalState(true));
         }}
       >
-        {" "}
         {/* Выводим состояние cart при нажатии на кнопку */}
-        <img className={style.cart} src={cart} alt="" />
+        <img className={style} src={cart} alt="" />
         {cartState.drinks.length + cartState.pizza.length ? (
           <p className={style.counter}>
             {cartState.drinks.length + cartState.pizza.length}

@@ -103,19 +103,18 @@ const defaultState = {
     drinks: [],
   },
   selectedType: "pizza",
+  showModal: false,
 };
-console.log(defaultState.cart);
 const SET_SELECTED_TYPE = "SET_SELECTED_TYPE";
 const ADD_TO_CART = "ADD_TO_CART";
 const REMOVE_FROM_CART = "REMOVE_FROM_CART";
+const MODAL_STATE = "MODAL_STATE";
 const reducer = (state = defaultState, action) => {
   switch (action.type) {
     case SET_SELECTED_TYPE:
-      console.log(action.payload);
       return { ...state, selectedType: action.payload };
     case ADD_TO_CART:
       const { selectedType, product } = action.payload;
-      console.log(state.cart[selectedType]);
       return {
         ...state,
         cart: {
@@ -129,9 +128,10 @@ const reducer = (state = defaultState, action) => {
       // Логика удаления товара из корзины
       // (state.cart.pizza или state.cart.drink, в зависимости от выбранного типа)
       return {};
+    case MODAL_STATE:
+      return { ...state, showModal: action.payload };
     default:
       return state;
   }
 };
-console.log(defaultState.selectedType);
 export default reducer;

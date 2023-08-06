@@ -24,10 +24,15 @@ $back: #181818;
 }
 
 .cart {
-  height: 4rem;
-  &:hover {
-    cursor: pointer;
-    color: $back;
+  width: 5%;
+  display: flex;
+  justify-content: center;
+  img {
+    height: 4rem;
+    &:hover {
+      cursor: pointer;
+      color: $back;
+    }
   }
 }
 
@@ -41,5 +46,14 @@ $back: #181818;
 
 .counter {
   position: absolute;
+  top: 2rem;
+  right: 4rem;
   color: #fff;
+  background-color: $back;
+  border-radius: 50%;
+  width: 1.3rem;
+  height: 1.3rem;
+  text-align: center;
+  font-weight: 700;
+  border: 1px solid green;
 }

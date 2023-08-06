@@ -1,14 +1,14 @@
 // store/actions.js
 
-// Функция-генератор действия для выбора типа продуктов для отображения
+// selecting type of goods to add
 export const setSelectedType = (selectedType) => {
   return {
-    type: "SET_SELECTED_TYPE", // Измените "SET_SELECTED_OPTION" на "SET_SELECTED_TYPE"
+    type: "SET_SELECTED_TYPE",
     payload: selectedType,
   };
 };
 
-// Функция-генератор действия для добавления товара в корзину
+// adding item to cart
 export const addToCart = (selectedType, product) => {
   return {
     type: "ADD_TO_CART",
@@ -16,10 +16,16 @@ export const addToCart = (selectedType, product) => {
   };
 };
 
-// Функция-генератор действия для удаления товара из корзины
+// remove item from cart
 export const removeFromCart = (product) => {
   return {
     type: "REMOVE_FROM_CART",
     payload: product,
   };
 };
+
+// modal window
+export const modalState = (visible) => ({
+  type: "MODAL_STATE",
+  payload: visible,
+});
