@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/FoodFiesta/static/css/main.4123e0ba.css",
-    "main.js": "/FoodFiesta/static/js/main.bf459770.js",
+    "main.css": "/FoodFiesta/static/css/main.5d47d44e.css",
+    "main.js": "/FoodFiesta/static/js/main.d554202c.js",
     "static/media/heroBg.png": "/FoodFiesta/static/media/heroBg.be4d07bac15970a96002.png",
     "static/media/pizza.jpg": "/FoodFiesta/static/media/pizza.66f7c5b73cbeaa0053b1.jpg",
     "static/media/cart.svg": "/FoodFiesta/static/media/cart.c4c777cfa7ee59c42a97f99c6e69cb05.svg",
     "index.html": "/FoodFiesta/index.html",
-    "main.4123e0ba.css.map": "/FoodFiesta/static/css/main.4123e0ba.css.map",
-    "main.bf459770.js.map": "/FoodFiesta/static/js/main.bf459770.js.map"
+    "main.5d47d44e.css.map": "/FoodFiesta/static/css/main.5d47d44e.css.map",
+    "main.d554202c.js.map": "/FoodFiesta/static/js/main.d554202c.js.map"
   },
   "entrypoints": [
-    "static/css/main.4123e0ba.css",
-    "static/js/main.bf459770.js"
+    "static/css/main.5d47d44e.css",
+    "static/js/main.d554202c.js"
   ]
 }
