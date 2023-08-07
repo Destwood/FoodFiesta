@@ -1,0 +1,68 @@
+/* modal.module.scss */
+// modal settings
+.overlay {
+  position: fixed;
+  inset: 0px;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.modal {
+  margin: auto;
+  height: 80%;
+  width: 50%;
+  position: absolute;
+  inset: 40px;
+  background: rgb(255, 255, 255);
+  border-radius: 4px;
+  outline: none;
+  padding: 20px;
+}
+// modal content
+.modalHeader {
+  font-size: 3rem;
+}
+
+.modalContent {
+  height: 80%;
+  overflow-y: auto;
+  margin: 1rem 0;
+}
+
+.modalFooter {
+  text-align: right;
+}
+
+// content item
+.cartItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.desc {
+  width: 20rem;
+  opacity: 0.95;
+}
+
+.img {
+  width: 13rem;
+}
+
+.price {
+  align-self: end;
+  color: #e73d0c;
+}
+
+.orderBtn {
+  font-size: 2rem;
+  border: none;
+  background-color: #18181841;
+  border-radius: 2rem;
+  &:hover {
+    cursor: pointer;
+  }
+}
