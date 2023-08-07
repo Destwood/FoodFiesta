@@ -8,7 +8,7 @@
 
 .modal {
   margin: auto;
-  height: 80%;
+  height: 90%;
   width: 50%;
   position: absolute;
   inset: 40px;
@@ -23,13 +23,18 @@
 }
 
 .modalContent {
-  height: 80%;
+  height: 75%;
   overflow-y: auto;
   margin: 1rem 0;
 }
 
 .modalFooter {
-  text-align: right;
+  border-radius: 0.5rem;
+  margin-left: auto;
+  width: fit-content;
+  font-size: 2rem;
+  padding: 1rem;
+  color: #221f1f;
 }
 
 // content item
@@ -58,11 +63,17 @@
 }
 
 .orderBtn {
-  font-size: 2rem;
+  height: 100%;
   border: none;
-  background-color: #18181841;
-  border-radius: 2rem;
+  font-size: 1.7rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background-color: #00a046;
+  color: #fff;
+
+  margin-left: 2rem;
   &:hover {
+    background-color: #00bc52;
     cursor: pointer;
   }
 }

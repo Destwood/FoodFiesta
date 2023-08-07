@@ -6,43 +6,17 @@ import "./App.css";
 import style from "./components/modal.module.scss";
 
 import Hero from "./components/Hero/Hero";
-import Cart from "./components/Cart/Cart";
 import ProductList from "./components/ProductList/ProductList";
 import Header from "./components/Header/Header";
-
-// const [data, setData] = useState();
-// let counter = 0;
-// const fetchData = async () => {
-//   if (counter === 0) {
-//     const url = "https://pizza-and-desserts.p.rapidapi.com/pizzas";
-//     const options = {
-//       method: "GET",
-//       headers: {
-//         "X-RapidAPI-Key":
-//           "568596038amsh448f317f7ed09c8p1918bdjsn8c7a59dbad08",
-//         "X-RapidAPI-Host": "pizza-and-desserts.p.rapidapi.com",
-//       },
-//     };
-
-//     try {
-//       const response = await fetch(url, options);
-//       const result = await response.json();
-//       setData(result);
-//     } catch (error) {
-//       console.error(error);
-//     }
-//     console.log(data);
-//     counter++;
-//   }
-// };
-// fetchData();
 
 function App() {
   const isVisible = useSelector((state) => state.showModal);
   const data = useSelector((state) => state.cart);
   const items = [...data.pizza, ...data.drinks];
   const dispatch = useDispatch();
-  const price = items.reduce((totalPrice, item) => totalPrice + item.price, 0);
+  const price = items
+    .reduce((totalPrice, item) => totalPrice + item.price, 0)
+    .toFixed(2);
   if (isVisible) {
     document.querySelector("body").style.overflowY = "hidden";
   } else {
@@ -68,12 +42,12 @@ function App() {
                 <p className={style.title}>{item.name}</p>
                 <p className={style.desc}>{item.desc}</p>
               </div>
-              <p className={style.price}>{item.price}</p>
+              <p className={style.price}>{item.price} $</p>
             </div>
           ))}
         </div>
         <div className={style.modalFooter}>
-          <button className={style.orderBtn}>Order: {price} $</button>
+          {price} $<button className={style.orderBtn}>Order: </button>
         </div>
       </Modal>
       {!isVisible && <Header />}
