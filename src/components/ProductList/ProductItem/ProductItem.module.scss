@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
 .wrapper {
-  flex: 1 1 30%;
+  flex: 1 1 25rem;
   background-color: #fff;
   padding: 1.5rem;
+
+  max-width: 44%;
 }
 
 .imgContainer {
@@ -39,9 +41,8 @@
 }
 
 .img {
-  width: 100%;
   display: block;
-  height: 100%; /* Додали висоту для контейнера .img */
+  width: 100%;
 }
 
 .content {
@@ -50,6 +51,7 @@
   justify-content: space-around;
   align-items: center;
   margin-top: 1rem;
+  min-height: 40vh;
 }
 
 .title {
@@ -60,12 +62,14 @@
 .desc {
   font-style: italic;
   text-align: center;
-  height: 5rem;
+  font-size: 1.6vw;
+  margin: 2rem 0;
 }
 
 .price {
   color: #e73d0c;
   font-weight: 700;
+  font-size: 1.4vw;
 }
 
 @media (max-width: 1280px) {
@@ -76,35 +80,41 @@
     min-height: 23rem;
   }
   .title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     white-space: nowrap;
   }
   .desc {
-    font-size: 1.9rem;
-    height: fit-content;
+    font-size: 3vw;
+    min-height: 11rem;
   }
-
   .price {
-    font-size: 1.6rem;
+    font-size: 2.8vw;
   }
 }
-@media (max-width: 786px) {
-  .img {
-    margin: auto;
+@media (max-width: 768px) {
+  .wrapper {
+    max-width: 100%;
   }
   .content {
-    min-height: 23rem;
+    max-width: 80vw;
+    min-height: 15rem;
   }
   .title {
-    font-size: 2.5rem;
-    white-space: nowrap;
+    font-size: 7.5vw;
   }
   .desc {
-    font-size: 1.9rem;
-    height: fit-content;
+    font-size: 6.5vw;
   }
-
   .price {
-    font-size: 1.6rem;
+    font-size: 6vw;
+  }
+  .img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .desc {
+    margin: 0;
   }
 }
