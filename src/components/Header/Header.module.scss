@@ -12,48 +12,24 @@ $back: #181818;
 
 .goodsContainer {
   color: #fff;
-  width: 95%;
+  width: 100%;
   display: flex;
   background-color: $back;
 }
 
 .goodsOption {
   width: 50%;
-  text-align: center;
-  font-size: 3rem;
-}
-
-.cart {
-  width: 5%;
   display: flex;
   justify-content: center;
-  img {
-    height: 4rem;
-    &:hover {
-      cursor: pointer;
-      color: $back;
-    }
+  align-items: center;
+  font-size: 3rem;
+  &:nth-child(1) {
+    border-right: 1px solid #fff;
   }
 }
 
-.btn {
-  &:hover {
-    cursor: pointer;
-    background-color: #fff;
-    color: $back;
+@media (max-width: 440px) {
+  .goodsOption {
+    font-size: 2.3rem;
   }
-}
-
-.counter {
-  position: absolute;
-  top: 2rem;
-  right: 4rem;
-  color: #fff;
-  background-color: $back;
-  border-radius: 50%;
-  width: 1.3rem;
-  height: 1.3rem;
-  text-align: center;
-  font-weight: 700;
-  border: 1px solid green;
 }

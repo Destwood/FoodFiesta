@@ -8,6 +8,7 @@ import style from "./components/modal.module.scss";
 import Hero from "./components/Hero/Hero";
 import ProductList from "./components/ProductList/ProductList";
 import Header from "./components/Header/Header";
+import OpenCart from "./components/OpenCart/OpenCart";
 
 function App() {
   const isVisible = useSelector((state) => state.showModal);
@@ -33,12 +34,21 @@ function App() {
         overlayClassName={style.overlay}
         onRequestClose={closeModal}
       >
-        <div className={style.modalHeader}>Your order:</div>
+        <div className={style.modalHeader}>
+          <p>Your order:</p>
+          <button
+            onClick={() => {
+              dispatch(modalState(false));
+            }}
+          >
+            X
+          </button>
+        </div>
         <div className={style.modalContent}>
           {items.map((item) => (
             <div key={item.name} className={style.cartItem}>
               <img className={style.img} src={item.img} alt={item.name} />
-              <div className="">
+              <div className={style.text}>
                 <p className={style.title}>{item.name}</p>
                 <p className={style.desc}>{item.desc}</p>
               </div>
@@ -50,10 +60,10 @@ function App() {
           {price} $<button className={style.orderBtn}>Order: </button>
         </div>
       </Modal>
+      <OpenCart />
       {!isVisible && <Header />}
 
       {/* <Cart /> */}
-
       <Hero />
       <ProductList />
     </div>

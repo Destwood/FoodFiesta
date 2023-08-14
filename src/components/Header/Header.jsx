@@ -2,7 +2,6 @@ import React from "react";
 import style from "./Header.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 
-import cart from "./cart.svg";
 import { modalState, setSelectedType } from "../store/actions";
 
 function Header() {
@@ -28,21 +27,6 @@ function Header() {
         >
           Drinks
         </div>
-      </div>
-      <div
-        className={style.cart}
-        onClick={() => {
-          dispatch(modalState(true));
-        }}
-      >
-        <img className={style} src={cart} alt="" />
-        {cartState.drinks.length + cartState.pizza.length ? (
-          <p className={style.counter}>
-            {cartState.drinks.length + cartState.pizza.length}
-          </p>
-        ) : (
-          <></>
-        )}
       </div>
     </div>
   );

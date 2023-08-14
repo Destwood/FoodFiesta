@@ -1,0 +1,40 @@
+.openCart {
+  background-color: #fff;
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+  position: fixed;
+  z-index: 2;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  border: 3px solid #181818;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.notActive {
+  background-color: rgb(148, 148, 148);
+  &:hover {
+    cursor: default;
+  }
+}
+
+.img {
+  width: 100%;
+}
+
+.counter {
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  color: #fff;
+  background-color: #181818;
+  border-radius: 50%;
+  width: 1.3rem;
+  height: 1.3rem;
+  text-align: center;
+  font-weight: 700;
+}
