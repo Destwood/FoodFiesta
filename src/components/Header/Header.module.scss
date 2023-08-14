@@ -23,6 +23,7 @@ $back: #181818;
   justify-content: center;
   align-items: center;
   font-size: 3rem;
+  user-select: none;
   &:nth-child(1) {
     border-right: 1px solid #fff;
   }
