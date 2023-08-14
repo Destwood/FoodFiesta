@@ -32,11 +32,9 @@ function Header() {
       <div
         className={style.cart}
         onClick={() => {
-          // dispatch(addToCart(selectedType, { name, desc, price, img }));
           dispatch(modalState(true));
         }}
       >
-        {/* Выводим состояние cart при нажатии на кнопку */}
         <img className={style} src={cart} alt="" />
         {cartState.drinks.length + cartState.pizza.length ? (
           <p className={style.counter}>

@@ -12,3 +12,8 @@
   flex-wrap: wrap;
   gap: 1rem;
 }
+@media (max-width: 440px) {
+  .content {
+    width: 100%;
+  }
+}

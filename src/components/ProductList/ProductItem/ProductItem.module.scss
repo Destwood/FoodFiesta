@@ -6,6 +6,7 @@
   padding: 1.5rem;
 
   max-width: 44%;
+  margin: auto;
 }
 
 .imgContainer {
@@ -73,6 +74,9 @@
 }
 
 @media (max-width: 1280px) {
+  .wrapper {
+    min-width: 90%;
+  }
   .img {
     margin: auto;
   }
@@ -80,11 +84,11 @@
     min-height: 23rem;
   }
   .title {
-    font-size: 2.2rem;
+    font-size: 7.5vw;
     white-space: nowrap;
   }
   .desc {
-    font-size: 3vw;
+    font-size: 6vw;
     min-height: 11rem;
   }
   .price {
@@ -98,15 +102,6 @@
   .content {
     max-width: 80vw;
     min-height: 15rem;
-  }
-  .title {
-    font-size: 7.5vw;
-  }
-  .desc {
-    font-size: 6.5vw;
-  }
-  .price {
-    font-size: 6vw;
   }
   .img {
     width: 100%;
